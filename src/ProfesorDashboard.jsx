@@ -6,7 +6,8 @@ import "./ProfesorDashboard.css";
 function ProfesorDashboard() {
   const [classes, setClasses] = useState([]);
   const [showAddClassForm, setShowAddClassForm] = useState(false);
-  const [newClass, setNewClass] = useState({ name: "", group: "", code: "" });
+  const [newClass, setNewClass] = useState({ name: "", group: "", code: "", semester: "" });
+  const [showErrorModal, setShowErrorModal] = useState(false); // Para mostrar el modal de error
   const navigate = useNavigate(); // Hook para redirigir
 
   useEffect(() => {
@@ -24,8 +25,8 @@ function ProfesorDashboard() {
 
   const handleAddClass = (e) => {
     e.preventDefault();
-    if (!newClass.name || !newClass.group || !newClass.code) {
-      alert("Por favor completa todos los campos.");
+    if (!newClass.name || !newClass.group || !newClass.code || !newClass.semester) {
+      setShowErrorModal(true); // Mostrar el modal de error
       return;
     }
 
@@ -38,7 +39,7 @@ function ProfesorDashboard() {
 
     setClasses(updatedClasses);
     setShowAddClassForm(false);
-    setNewClass({ name: "", group: "", code: "" });
+    setNewClass({ name: "", group: "", code: "", semester: "" });
   };
 
   const handleClassClick = (clase) => {
@@ -48,6 +49,10 @@ function ProfesorDashboard() {
 
   const handleLogout = () => {
     navigate("/"); // Redirige al usuario a la pantalla de Login
+  };
+
+  const closeErrorModal = () => {
+    setShowErrorModal(false); // Cerrar el modal de error
   };
 
   return (
@@ -72,6 +77,7 @@ function ProfesorDashboard() {
               <h2>{clase.name}</h2>
               <p>{clase.group}</p>
               <p>{clase.code}</p>
+              <p>Semestre: {clase.semester || "No asignado"}</p> {/* Muestra el semestre de la clase */}
             </div>
           ))}
           <div
@@ -110,9 +116,32 @@ function ProfesorDashboard() {
               value={newClass.code}
               onChange={handleInputChange}
             />
+            {/* Selector de semestre dentro del modal */}
+            <label htmlFor="semester">Semestre: </label>
+            <select
+              id="semester"
+              name="semester"
+              value={newClass.semester}
+              onChange={handleInputChange}
+            >
+              <option value="2023-1">2023-1</option>
+              <option value="2023-2">2023-2</option>
+              <option value="2024-1">2024-1</option>
+            </select>
             <button type="submit">Añadir</button>
           </form>
           <button onClick={() => setShowAddClassForm(false)}>Cerrar</button>
+        </div>
+      )}
+
+      {/* Modal de error si falta algún campo */}
+      {showErrorModal && (
+        <div className="error-modal">
+          <div className="error-modal-content">
+            <h3>¡Faltan campos!</h3>
+            <p>Por favor completa todos los campos (nombre, grupo, código, semestre).</p>
+            <button onClick={closeErrorModal}>Cerrar</button>
+          </div>
         </div>
       )}
     </div>

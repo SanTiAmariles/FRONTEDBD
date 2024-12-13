@@ -1,50 +1,59 @@
-/* Reportes.css */
-.reportes-container {
-    display: flex;
+/* Estilo para el contenedor principal */
+.main-content {
+  margin-left: 300px; /* Aumentamos el valor para moverlo aún más hacia la derecha */
+  padding: 20px;
+}
+
+/* Estilo para los contenedores que estarán en fila */
+.horizontal-layout {
+  display: flex;
+  flex-direction: row; /* Organiza los elementos en una fila */
+  gap: 30px; /* Aumenta el espacio entre los elementos */
+  align-items: center; /* Alineación vertical de los elementos */
+  margin-top: 20px;
+  justify-content: flex-start; /* Alinea los elementos a la izquierda */
+  margin-left: 30px; /* Ajuste adicional de margen a la izquierda */
+}
+
+/* Estilo para los elementos de texto (Grupo, Código, etc.) */
+.horizontal-layout .info-item {
+  font-size: 1.2rem;
+  color: #c58888;
+  margin: 0;
+  padding: 5px 10px;
+  text-align: center;
+}
+
+/* Estilo para los botones (Lista de Estudiantes, etc.) */
+.horizontal-layout .boton-reporte {
+  background-color: #3498db; /* Azul brillante */
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin: 0 10px; /* Añade margen entre los botones */
+}
+
+/* Cambio de color al pasar el ratón por encima */
+.horizontal-layout .boton-reporte:hover {
+  background-color: #2980b9; /* Azul más oscuro */
+}
+
+/* Ajuste adicional para mejorar la separación en pantallas pequeñas */
+@media (max-width: 768px) {
+  .horizontal-layout {
+    flex-direction: column; /* Cambiar la fila a columna en pantallas pequeñas */
+    gap: 15px; /* Menos espacio entre los elementos */
+    align-items: flex-start; /* Alinear los elementos a la izquierda */
+    margin-left: 20px; /* Menos margen a la izquierda en pantallas pequeñas */
   }
-  
-  .sidebar {
-    width: 200px;
-    background-color: #0056b3;
-    padding: 20px;
+
+  .horizontal-layout .boton-reporte {
+    width: 100%; /* Los botones ocupan todo el ancho en pantallas pequeñas */
+    padding: 10px; /* Ajuste en el padding */
+    text-align: center; /* Centrar el texto */
   }
-  
-  .sidebar ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  .sidebar li {
-    margin: 10px 0;
-    cursor: pointer;
-    color: #f0f0f1; /* Color azul para los elementos */
-    font-weight: bold;
-  }
-  
-  .sidebar li:hover {
-    color: #0056b3; /* Cambia a un azul más oscuro cuando se pasa el ratón */
-  }
-  
-  .main-content {
-    flex: 1;
-    padding: 20px;
-  }
-  
-  .main-content h2 {
-    margin-top: 0;
-  }
-  
-  .main-content .btn-home {
-    background-color: #eaedf2;
-    color:  #e7ecf0;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 20px;
-  }
-  
-  .main-content .btn-home:hover {
-    background-color: #0056b3;
-  }
-  
+}

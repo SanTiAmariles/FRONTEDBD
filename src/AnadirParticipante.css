@@ -1,0 +1,79 @@
+.add-participant-container {
+    padding: 20px;
+    background-color: #f4f6f7;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+  }
+  
+  .add-participant-container h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .add-participant-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .add-participant-container input {
+    padding: 12px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    outline: none;
+  }
+  
+  .add-participant-container input:focus {
+    border-color: #3498db;
+  }
+  
+  .add-participant-container button {
+    background: linear-gradient(45deg, #3498db, #2980b9);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(52, 152, 219, 0.4);
+    transition: all 0.3s ease;
+  }
+  
+  .add-participant-container button:hover {
+    background: linear-gradient(45deg, #2980b9, #3498db);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(52, 152, 219, 0.6);
+  }
+  
+  .add-participant-container button:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 5px rgba(52, 152, 219, 0.3);
+  }
+  
+  .participant-list {
+    margin-top: 20px;
+  }
+  
+  .participant-item {
+    background-color: #fff;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .participant-item p {
+    margin: 5px 0;
+  }
+  
+  .participant-item span {
+    font-weight: bold;
+    color: #333;
+  }
+  

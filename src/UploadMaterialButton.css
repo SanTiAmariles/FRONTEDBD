@@ -1,0 +1,133 @@
+/* Contenedor principal */
+.upload-container {
+    background-color: white;
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 2px solid #4a90e2;
+  
+    /* Centramos el contenido */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;  /* Esto hará que el contenedor ocupe toda la altura de la pantalla */
+  }
+  
+  /* Título */
+  .title {
+    text-align: center;
+    font-size: 24px;
+    color: #4a90e2;
+    margin-bottom: 20px;
+  }
+  
+  /* Botón de Subir Material */
+  .upload-btn {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 250px; /* Establece un límite de tamaño */
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  .upload-btn:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+  }
+  
+  .upload-btn:active {
+    transform: translateY(1px);
+  }
+  
+  /* Área de arrastre de archivos */
+  .drop-area {
+    background-color: #f7f7f7;
+    padding: 40px;
+    border-radius: 8px;
+    border: 2px dashed #4a90e2;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 400px; /* Limita el tamaño del área de drop */
+  }
+  
+  .drop-area:hover {
+    background-color: #e1f3fc;
+    border-color: #357ABD;
+  }
+  
+  .drop-area p {
+    margin: 5px 0;
+    color: #777;
+  }
+  
+  .select-files {
+    color: #4a90e2;
+    font-weight: bold;
+  }
+  
+  /* Input oculto para selección de archivos */
+  .file-input {
+    display: none;
+  }
+  
+  /* Mensaje cuando no hay archivos */
+  .no-files {
+    text-align: center;
+    color: #888;
+    margin-top: 15px;
+  }
+  
+  /* Archivos subidos */
+  .uploaded-files {
+    margin-top: 20px;
+  }
+  
+  .uploaded-files h3 {
+    font-size: 18px;
+    color: #4a90e2;
+    margin-bottom: 10px;
+  }
+  
+  .uploaded-files ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .file-item {
+    background-color: #f9f9f9;
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .remove-btn {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .remove-btn:hover {
+    background-color: #d32f2f;
+  }
+  

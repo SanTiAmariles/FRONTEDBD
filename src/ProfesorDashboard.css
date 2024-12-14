@@ -1,0 +1,152 @@
+/* Estilo general para mantener el diseño centrado y limpio */
+.profesor-dashboard {
+  display: flex;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+  padding: 10px; /* Añadido para agregar espacio adicional */
+}
+
+/* Estilo para la barra lateral */
+.sidebar {
+  width: 250px;
+  background-color: #007BFF; /* Azul brillante para la barra lateral */
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 20px; /* Separar los elementos de la barra lateral */
+  margin-right: 15px; /* Espacio entre la barra lateral y el contenido principal */
+  height: 100%; /* Asegura que la barra lateral tenga altura completa */
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Estilo para los elementos de la barra lateral */
+.sidebar li {
+  margin: 10px 0;
+  padding: 10px;
+  cursor: pointer;
+  text-decoration: none;
+  border-radius: 4px; /* Bordes redondeados */
+  background-color: transparent; /* Fondo transparente */
+  color: white; /* Texto blanco */
+}
+
+/* Efecto al pasar el ratón sobre los elementos de la barra lateral */
+.sidebar li:hover {
+  background-color: #0056b3; /* Azul más oscuro al pasar el ratón */
+}
+
+/* Estilo para los enlaces dentro de la barra lateral */
+.sidebar ul li a {
+  text-decoration: none; /* Eliminar subrayado */
+  color: white; /* Color blanco por defecto */
+}
+
+/* Contenido principal */
+.main-content {
+  flex: 1;
+  padding: 20px;
+  background-color: #ecf0f1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Agregado para separar los elementos dentro del contenido principal */
+}
+
+.main-content h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #34495e;
+  text-align: center;
+}
+
+/* Tarjetas de clases */
+.tarjetas-clases {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: center; /* Centrado horizontal */
+}
+
+.tarjeta-clase {
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  width: 200px; /* Tamaño fijo para las tarjetas */
+  height: 150px; /* Altura fija para uniformidad */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tarjeta-clase:hover {
+  transform: scale(1.05); /* Pequeño aumento al pasar el cursor */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.tarjeta-clase.agregar-clase {
+  background-color: #f9f9f9;
+  color: #7f8c8d;
+  border: 2px dashed #bdc3c7;
+}
+
+.tarjeta-clase.agregar-clase:hover {
+  background-color: #ecf0f1;
+  color: #34495e;
+}
+
+/* Modal */
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  width: 300px; /* Ancho del modal */
+  text-align: center;
+}
+
+.modal h2 {
+  margin-bottom: 10px;
+}
+
+.modal button {
+  margin: 10px 5px;
+  padding: 10px 20px;
+  background-color: #2ecc71;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.modal button:hover {
+  background-color: #27ae60;
+}
+
+/* Fondo oscuro del modal */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}

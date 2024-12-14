@@ -1,0 +1,232 @@
+/* Estilo general */
+.App {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #e0e0e0; /* Color de fondo gris claro */
+}
+
+/* Estilos del login */
+.login-container {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+.logo h1 {
+  text-align: center;
+  color: #f45d48;
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.login-form input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.login-form button {
+  width: 100%;
+  padding: 12px;
+  background-color: #A020F0;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.login-form button:hover {
+  background-color: #800080;
+}
+
+.register-link {
+  text-align: center;
+  font-size: 14px;
+}
+
+.register-link a {
+  color: #4285f4;
+  text-decoration: none;
+}
+
+.register-link a:hover {
+  text-decoration: underline;
+}
+
+/* Estilos del profesor */
+.profesor-container {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+}
+.register-container {
+  text-align: center;
+  padding: 20px;
+}
+
+.user-type {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.user-type button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #f0f0f0;
+  transition: background-color 0.3s;
+}
+
+.user-type button:hover {
+  background-color: #007BFF;
+  color: white;
+}
+
+.sidebar {
+  width: 200px;
+  background-color: #c6a6a6;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  padding: 10px 5px;
+  cursor: pointer;
+}
+
+.sidebar li:hover {
+  background-color: #978484;
+}
+
+.main-content {
+  flex: 1;
+  background-color: #e6e6fa;
+  padding: 20px;
+}
+
+.tarjetas-clases {
+  display: flex;
+  gap: 20px;
+}
+
+.tarjeta-clase {
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+.user-type-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.user-type-buttons button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  width: 45%;
+}
+
+.user-type-buttons button:hover {
+  background-color: #45a049;
+}
+
+
+.tarjeta-clase h2 {
+  margin-bottom: 10px;
+}
+
+.tarjeta-clase.agregar-clase {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  background-color: #f9f9f9;
+  color: #aaa;
+  cursor: pointer;
+}
+
+.tarjeta-clase.agregar-clase:hover {
+  background-color: #e0e0e0;
+  color: rgb(193, 182, 182);
+}
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 20px;
+  border: 1px solid #ccc;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  width: 300px;
+  text-align: center;
+  z-index: 1000;
+}
+
+.modal h2 {
+  margin-bottom: 20px;
+  color: #ccaaaa;
+}
+
+.modal form input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.modal form button {
+  padding: 10px 20px;
+  background-color: #A020F0;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.modal form button:hover {
+  background-color: #800080;
+}
+
+.modal button {
+  margin-top: 10px;
+  background-color: #f0f0f0;
+  color: #d7d4d4;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.modal button:hover {
+  background-color: #ddd;
+}
